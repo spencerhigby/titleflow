@@ -320,7 +320,7 @@ function App() {
             <ShieldCheck size={23} />
           </div>
           <div>
-            <p className="text-xl font-semibold">TitleFlow</p>
+            <p className="text-xl font-semibold">CloseFlow</p>
             <p className="text-sm text-slate-300">Escrow operations</p>
           </div>
         </div>
@@ -348,10 +348,13 @@ function App() {
         <header className="sticky top-0 z-30 border-b border-[#1b3a58] bg-[#0d2238]/95 px-5 py-4 shadow-lg backdrop-blur lg:px-8">
           <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase text-[#d7aa4b]">TitleFlow workspace</p>
+              <p className="text-sm font-semibold uppercase text-[#d7aa4b]">CloseFlow workspace</p>
               <h1 className="text-2xl font-semibold text-white md:text-3xl">
                 {activeView === "dashboard" ? "Dashboard" : activeView === "templates" ? "Templates" : activeFile.fileNumber}
               </h1>
+<p className="text-sm text-slate-300 mt-1">
+  Streamlined title & escrow operations in one place.
+</p>
             </div>
             <div className="flex flex-col gap-3 md:flex-row md:items-center">
               <SearchBox value={search} onChange={setSearch} />
