@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #f4f6f8;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white;
+  }
+
+  .nav-item-active {
+    @apply bg-white text-[#0d2238] shadow-sm hover:bg-white hover:text-[#0d2238];
+  }
+
+  .search-box {
+    @apply flex min-h-11 items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 shadow-sm transition focus-within:border-[#2d8f86] focus-within:ring-4 focus-within:ring-teal-100;
+  }
+
+  .file-row {
+    @apply flex w-full gap-4 rounded-lg border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-[#2d8f86] hover:shadow-panel;
+  }
+
+  .file-row-active {
+    @apply border-[#2d8f86] bg-[#edf7f5] shadow-panel;
+  }
+
+  .contact-card,
+  .template-card {
+    @apply rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:border-[#2d8f86] hover:shadow-panel;
+  }
+
+  .form-panel {
+    @apply rounded-lg border border-slate-200 bg-[#f7faf9] p-4 shadow-sm;
+  }
+
+  .document-row {
+    @apply grid gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm lg:grid-cols-[260px_1fr];
+  }
+
+  .document-folder {
+    @apply rounded-lg border border-slate-200 bg-[#f7faf9] p-4 shadow-sm transition;
+  }
+
+  .document-folder-active {
+    @apply border-[#2d8f86] bg-[#edf7f5] ring-4 ring-teal-100;
+  }
+
+  .uploaded-document-row {
+    @apply flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white p-3 shadow-sm;
+  }
+
+  .checklist-row {
+    @apply flex gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:border-[#2d8f86];
+  }
+
+  .badge {
+    @apply rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold uppercase text-slate-500;
+  }
+
+  .status-pill {
+    @apply inline-flex min-h-8 items-center rounded-lg bg-slate-100 px-3 text-sm font-semibold text-slate-600;
+  }
+
+  .status-navy {
+    @apply bg-[#0d2238] text-white;
+  }
+
+  .status-teal {
+    @apply bg-[#edf7f5] text-[#1e6f68];
+  }
+
+  .status-gold {
+    @apply bg-[#fff4d9] text-[#8b6415];
+  }
+
+  .section-kicker {
+    @apply text-sm font-semibold uppercase text-slate-500;
+  }
+
+  .input {
+    @apply mt-2 min-h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-[#0d2238] outline-none transition focus:border-[#2d8f86] focus:ring-4 focus:ring-teal-100;
+  }
+
+  .mini-select {
+    @apply min-h-9 rounded-lg border border-slate-200 bg-white px-3 text-sm font-semibold text-[#0d2238] outline-none transition focus:border-[#2d8f86] focus:ring-4 focus:ring-teal-100;
+  }
+
+  .primary-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#0d2238] px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-[#173a5c] hover:shadow-md;
+  }
+
+  .secondary-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 text-sm font-semibold text-[#0d2238] shadow-sm transition hover:border-[#2d8f86] hover:text-[#2d8f86] hover:shadow-md;
+  }
+
+  .chip-button {
+    @apply min-h-10 rounded-lg bg-white px-3 text-sm font-semibold text-slate-600 shadow-sm ring-1 ring-slate-200 transition hover:bg-[#0d2238] hover:text-white hover:ring-[#0d2238];
+  }
+
+  .icon-button {
+    @apply inline-grid h-9 w-9 place-items-center rounded-lg border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-[#2d8f86] hover:text-[#2d8f86] hover:shadow-md;
+  }
+
+  .tab-button {
+    @apply min-h-10 shrink-0 rounded-lg border border-transparent px-4 text-sm font-semibold text-slate-500 transition hover:border-slate-200 hover:bg-slate-50 hover:text-[#0d2238];
+  }
+
+  .tab-button-active {
+    @apply border-[#0d2238] bg-[#0d2238] text-white shadow-md hover:bg-[#0d2238] hover:text-white;
+  }
+
+  .checkbox-panel {
+    @apply flex min-h-11 items-center gap-3 rounded-lg border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600;
+  }
+
+  .merge-chip {
+    @apply rounded-md bg-white px-2 py-1 text-xs font-semibold text-[#2d8f86] ring-1 ring-teal-100 transition hover:bg-[#edf7f5];
+  }
+
+  .template-list-button {
+    @apply flex w-full flex-col rounded-lg border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:border-[#2d8f86] hover:shadow-panel;
+  }
+
+  .modal-backdrop {
+    @apply fixed inset-0 z-50 grid place-items-center bg-[#0d2238]/55 p-4 backdrop-blur-sm;
+  }
+
+  .modal-panel {
+    @apply max-h-[92vh] w-full overflow-auto rounded-lg bg-white shadow-2xl;
+  }
+
+  .shadow-panel {
+    box-shadow: 0 18px 45px rgba(13, 34, 56, 0.1);
+  }
+}
